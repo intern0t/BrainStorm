@@ -27,12 +27,11 @@ namespace BrainStorm
 
             this.Style = MetroFramework.MetroColorStyle.Red;
             panelButton.Enabled = false;
+            btnBackup.Enabled = false;
 
             #endregion
         }
-
-
-
+        
         private void Main_Load(object sender, EventArgs e)
         {
 
