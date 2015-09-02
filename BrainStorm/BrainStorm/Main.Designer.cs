@@ -149,6 +149,7 @@
             this.btnEncrypt.TabIndex = 2;
             this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseSelectable = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // btnDecrypt
             // 
@@ -158,6 +159,7 @@
             this.btnDecrypt.TabIndex = 3;
             this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseSelectable = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnBackup
             // 
@@ -167,6 +169,7 @@
             this.btnBackup.TabIndex = 4;
             this.btnBackup.Text = "Backup";
             this.btnBackup.UseSelectable = true;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // Main
             // 

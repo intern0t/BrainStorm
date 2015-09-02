@@ -31,6 +31,8 @@ namespace BrainStorm
 
         }
 
+        #region Triggered Events
+
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -49,5 +51,34 @@ namespace BrainStorm
             }
             else { }
         }
+
+        private void btnEncrypt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch { }
+        }
+
+        private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch { }
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch { }
+        }
+
+        #endregion
     }
 }
