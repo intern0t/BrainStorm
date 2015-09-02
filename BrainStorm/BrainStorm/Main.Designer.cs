@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.lnkOwner = new MetroFramework.Controls.MetroLink();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.panelMain = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtFilePath = new MetroFramework.Controls.MetroTextBox();
             this.btnBrowse = new MetroFramework.Controls.MetroButton();
             this.txtDecryptionPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.panelButton = new MetroFramework.Controls.MetroPanel();
             this.btnEncrypt = new MetroFramework.Controls.MetroButton();
             this.btnDecrypt = new MetroFramework.Controls.MetroButton();
             this.btnBackup = new MetroFramework.Controls.MetroButton();
-            this.metroPanel1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // lnkOwner
@@ -52,24 +52,24 @@
             this.lnkOwner.Text = "Copyright © 2015, intern0t";
             this.lnkOwner.UseSelectable = true;
             // 
-            // metroPanel1
+            // panelMain
             // 
-            this.metroPanel1.Controls.Add(this.metroPanel2);
-            this.metroPanel1.Controls.Add(this.txtDecryptionPassword);
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.btnBrowse);
-            this.metroPanel1.Controls.Add(this.txtFilePath);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 65);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(459, 105);
-            this.metroPanel1.TabIndex = 1;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.panelMain.Controls.Add(this.panelButton);
+            this.panelMain.Controls.Add(this.txtDecryptionPassword);
+            this.panelMain.Controls.Add(this.metroLabel2);
+            this.panelMain.Controls.Add(this.btnBrowse);
+            this.panelMain.Controls.Add(this.txtFilePath);
+            this.panelMain.Controls.Add(this.metroLabel1);
+            this.panelMain.HorizontalScrollbarBarColor = true;
+            this.panelMain.HorizontalScrollbarHighlightOnWheel = false;
+            this.panelMain.HorizontalScrollbarSize = 10;
+            this.panelMain.Location = new System.Drawing.Point(23, 65);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(459, 105);
+            this.panelMain.TabIndex = 1;
+            this.panelMain.VerticalScrollbarBarColor = true;
+            this.panelMain.VerticalScrollbarHighlightOnWheel = false;
+            this.panelMain.VerticalScrollbarSize = 10;
             // 
             // metroLabel1
             // 
@@ -124,21 +124,21 @@
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Decryption Password";
             // 
-            // metroPanel2
+            // panelButton
             // 
-            this.metroPanel2.Controls.Add(this.btnBackup);
-            this.metroPanel2.Controls.Add(this.btnDecrypt);
-            this.metroPanel2.Controls.Add(this.btnEncrypt);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(3, 63);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(453, 39);
-            this.metroPanel2.TabIndex = 7;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.panelButton.Controls.Add(this.btnBackup);
+            this.panelButton.Controls.Add(this.btnDecrypt);
+            this.panelButton.Controls.Add(this.btnEncrypt);
+            this.panelButton.HorizontalScrollbarBarColor = true;
+            this.panelButton.HorizontalScrollbarHighlightOnWheel = false;
+            this.panelButton.HorizontalScrollbarSize = 10;
+            this.panelButton.Location = new System.Drawing.Point(3, 63);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(453, 39);
+            this.panelButton.TabIndex = 7;
+            this.panelButton.VerticalScrollbarBarColor = true;
+            this.panelButton.VerticalScrollbarHighlightOnWheel = false;
+            this.panelButton.VerticalScrollbarSize = 10;
             // 
             // btnEncrypt
             // 
@@ -172,15 +172,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 209);
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.lnkOwner);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Resizable = false;
             this.Text = "BrainStorm";
-            this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            this.panelButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -188,13 +188,13 @@
         #endregion
 
         private MetroFramework.Controls.MetroLink lnkOwner;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel panelMain;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnBrowse;
         private MetroFramework.Controls.MetroTextBox txtFilePath;
         private MetroFramework.Controls.MetroTextBox txtDecryptionPassword;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroPanel panelButton;
         private MetroFramework.Controls.MetroButton btnBackup;
         private MetroFramework.Controls.MetroButton btnDecrypt;
         private MetroFramework.Controls.MetroButton btnEncrypt;
