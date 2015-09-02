@@ -45,7 +45,7 @@
             // 
             // lnkOwner
             // 
-            this.lnkOwner.Location = new System.Drawing.Point(324, 173);
+            this.lnkOwner.Location = new System.Drawing.Point(324, 165);
             this.lnkOwner.Name = "lnkOwner";
             this.lnkOwner.Size = new System.Drawing.Size(158, 23);
             this.lnkOwner.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.panelMain.HorizontalScrollbarSize = 10;
             this.panelMain.Location = new System.Drawing.Point(23, 65);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(459, 105);
+            this.panelMain.Size = new System.Drawing.Size(459, 96);
             this.panelMain.TabIndex = 1;
             this.panelMain.VerticalScrollbarBarColor = true;
             this.panelMain.VerticalScrollbarHighlightOnWheel = false;
@@ -101,6 +101,7 @@
             this.btnBrowse.TabIndex = 4;
             this.btnBrowse.Text = "..";
             this.btnBrowse.UseSelectable = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // txtDecryptionPassword
             // 
@@ -134,7 +135,7 @@
             this.panelButton.HorizontalScrollbarSize = 10;
             this.panelButton.Location = new System.Drawing.Point(3, 63);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(453, 39);
+            this.panelButton.Size = new System.Drawing.Size(453, 30);
             this.panelButton.TabIndex = 7;
             this.panelButton.VerticalScrollbarBarColor = true;
             this.panelButton.VerticalScrollbarHighlightOnWheel = false;
@@ -142,7 +143,7 @@
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(145, 7);
+            this.btnEncrypt.Location = new System.Drawing.Point(145, 3);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(100, 23);
             this.btnEncrypt.TabIndex = 2;
@@ -151,7 +152,7 @@
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(251, 7);
+            this.btnDecrypt.Location = new System.Drawing.Point(251, 3);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(91, 23);
             this.btnDecrypt.TabIndex = 3;
@@ -160,7 +161,7 @@
             // 
             // btnBackup
             // 
-            this.btnBackup.Location = new System.Drawing.Point(348, 7);
+            this.btnBackup.Location = new System.Drawing.Point(348, 3);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(102, 23);
             this.btnBackup.TabIndex = 4;
@@ -171,13 +172,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 209);
+            this.ClientSize = new System.Drawing.Size(505, 197);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.lnkOwner);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Resizable = false;
             this.Text = "BrainStorm";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelButton.ResumeLayout(false);
