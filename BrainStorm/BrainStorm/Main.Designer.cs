@@ -30,26 +30,26 @@
         {
             this.lnkOwner = new MetroFramework.Controls.MetroLink();
             this.panelMain = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtFilePath = new MetroFramework.Controls.MetroTextBox();
-            this.btnBrowse = new MetroFramework.Controls.MetroButton();
+            this.panelButton = new MetroFramework.Controls.MetroPanel();
+            this.btnBackup = new MetroFramework.Controls.MetroButton();
+            this.btnDecrypt = new MetroFramework.Controls.MetroButton();
+            this.btnEncrypt = new MetroFramework.Controls.MetroButton();
             this.txtDecryptionPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.panelButton = new MetroFramework.Controls.MetroPanel();
-            this.btnEncrypt = new MetroFramework.Controls.MetroButton();
-            this.btnDecrypt = new MetroFramework.Controls.MetroButton();
-            this.btnBackup = new MetroFramework.Controls.MetroButton();
+            this.btnBrowse = new MetroFramework.Controls.MetroButton();
+            this.txtFilePath = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panelMain.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // lnkOwner
             // 
-            this.lnkOwner.Location = new System.Drawing.Point(324, 165);
+            this.lnkOwner.Location = new System.Drawing.Point(311, 165);
             this.lnkOwner.Name = "lnkOwner";
-            this.lnkOwner.Size = new System.Drawing.Size(158, 23);
+            this.lnkOwner.Size = new System.Drawing.Size(171, 23);
             this.lnkOwner.TabIndex = 0;
-            this.lnkOwner.Text = "Copyright © 2015, intern0t";
+            this.lnkOwner.Text = "Copyright © 2015, Scarecrow";
             this.lnkOwner.UseSelectable = true;
             // 
             // panelMain
@@ -71,37 +71,51 @@
             this.panelMain.VerticalScrollbarHighlightOnWheel = false;
             this.panelMain.VerticalScrollbarSize = 10;
             // 
-            // metroLabel1
+            // panelButton
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(24, 6);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(118, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Browse Secure File";
+            this.panelButton.Controls.Add(this.btnBackup);
+            this.panelButton.Controls.Add(this.btnDecrypt);
+            this.panelButton.Controls.Add(this.btnEncrypt);
+            this.panelButton.HorizontalScrollbarBarColor = true;
+            this.panelButton.HorizontalScrollbarHighlightOnWheel = false;
+            this.panelButton.HorizontalScrollbarSize = 10;
+            this.panelButton.Location = new System.Drawing.Point(3, 63);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(453, 30);
+            this.panelButton.TabIndex = 7;
+            this.panelButton.VerticalScrollbarBarColor = true;
+            this.panelButton.VerticalScrollbarHighlightOnWheel = false;
+            this.panelButton.VerticalScrollbarSize = 10;
             // 
-            // txtFilePath
+            // btnBackup
             // 
-            this.txtFilePath.Lines = new string[0];
-            this.txtFilePath.Location = new System.Drawing.Point(148, 5);
-            this.txtFilePath.MaxLength = 32767;
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.PasswordChar = '\0';
-            this.txtFilePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFilePath.SelectedText = "";
-            this.txtFilePath.Size = new System.Drawing.Size(277, 23);
-            this.txtFilePath.TabIndex = 3;
-            this.txtFilePath.UseSelectable = true;
+            this.btnBackup.Location = new System.Drawing.Point(348, 3);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(102, 23);
+            this.btnBackup.TabIndex = 4;
+            this.btnBackup.Text = "Backup";
+            this.btnBackup.UseSelectable = true;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
-            // btnBrowse
+            // btnDecrypt
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(431, 5);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(25, 23);
-            this.btnBrowse.TabIndex = 4;
-            this.btnBrowse.Text = "..";
-            this.btnBrowse.UseSelectable = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.btnDecrypt.Location = new System.Drawing.Point(251, 3);
+            this.btnDecrypt.Name = "btnDecrypt";
+            this.btnDecrypt.Size = new System.Drawing.Size(91, 23);
+            this.btnDecrypt.TabIndex = 3;
+            this.btnDecrypt.Text = "Decrypt";
+            this.btnDecrypt.UseSelectable = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            // 
+            // btnEncrypt
+            // 
+            this.btnEncrypt.Location = new System.Drawing.Point(145, 3);
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.Size = new System.Drawing.Size(100, 23);
+            this.btnEncrypt.TabIndex = 2;
+            this.btnEncrypt.Text = "Encrypt";
+            this.btnEncrypt.UseSelectable = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // txtDecryptionPassword
             // 
@@ -125,51 +139,37 @@
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Decryption Password";
             // 
-            // panelButton
+            // btnBrowse
             // 
-            this.panelButton.Controls.Add(this.btnBackup);
-            this.panelButton.Controls.Add(this.btnDecrypt);
-            this.panelButton.Controls.Add(this.btnEncrypt);
-            this.panelButton.HorizontalScrollbarBarColor = true;
-            this.panelButton.HorizontalScrollbarHighlightOnWheel = false;
-            this.panelButton.HorizontalScrollbarSize = 10;
-            this.panelButton.Location = new System.Drawing.Point(3, 63);
-            this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(453, 30);
-            this.panelButton.TabIndex = 7;
-            this.panelButton.VerticalScrollbarBarColor = true;
-            this.panelButton.VerticalScrollbarHighlightOnWheel = false;
-            this.panelButton.VerticalScrollbarSize = 10;
+            this.btnBrowse.Location = new System.Drawing.Point(431, 5);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(25, 23);
+            this.btnBrowse.TabIndex = 4;
+            this.btnBrowse.Text = "..";
+            this.btnBrowse.UseSelectable = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // btnEncrypt
+            // txtFilePath
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(145, 3);
-            this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(100, 23);
-            this.btnEncrypt.TabIndex = 2;
-            this.btnEncrypt.Text = "Encrypt";
-            this.btnEncrypt.UseSelectable = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
+            this.txtFilePath.Lines = new string[0];
+            this.txtFilePath.Location = new System.Drawing.Point(148, 5);
+            this.txtFilePath.MaxLength = 32767;
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.PasswordChar = '\0';
+            this.txtFilePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFilePath.SelectedText = "";
+            this.txtFilePath.Size = new System.Drawing.Size(277, 23);
+            this.txtFilePath.TabIndex = 3;
+            this.txtFilePath.UseSelectable = true;
             // 
-            // btnDecrypt
+            // metroLabel1
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(251, 3);
-            this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(91, 23);
-            this.btnDecrypt.TabIndex = 3;
-            this.btnDecrypt.Text = "Decrypt";
-            this.btnDecrypt.UseSelectable = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
-            // 
-            // btnBackup
-            // 
-            this.btnBackup.Location = new System.Drawing.Point(348, 3);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(102, 23);
-            this.btnBackup.TabIndex = 4;
-            this.btnBackup.Text = "Backup";
-            this.btnBackup.UseSelectable = true;
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(24, 6);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(118, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Browse Secure File";
             // 
             // Main
             // 

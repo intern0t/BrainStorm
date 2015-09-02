@@ -16,8 +16,8 @@ namespace BrainStorm
 {
     public partial class Main : MetroForm
     {
-        private static String _MD5CheckSum = string.Empty;
-        private static String MD5CheckSum = string.Empty;
+        private static String _MD5CheckSum  = string.Empty;
+        private static String MD5CheckSum   = string.Empty;
 
         public Main()
         {
