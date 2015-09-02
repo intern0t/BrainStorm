@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -14,6 +16,9 @@ namespace BrainStorm
 {
     public partial class Main : MetroForm
     {
+        private static String _MD5CheckSum = string.Empty;
+        private static String MD5CheckSum = string.Empty;
+
         public Main()
         {
             InitializeComponent();
@@ -26,12 +31,25 @@ namespace BrainStorm
             #endregion
         }
 
+
+
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
 
         #region Triggered Events
+
+        public static string MD5Calculate(string filePath)
+        {
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = File.OpenRead(filePath))
+                {
+                    return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
+                }
+            }
+        }
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -43,6 +61,8 @@ namespace BrainStorm
                 if (ofd.FileName.Length > 1)
                 {
                     txtFilePath.Text = ofd.FileName;
+                    panelButton.Enabled = true;
+                    _MD5CheckSum = MD5Calculate(txtFilePath.Text);
                 }
                 else
                 {
@@ -56,7 +76,9 @@ namespace BrainStorm
         {
             try
             {
-
+                string FileContents = File.ReadAllText(txtFilePath.Text);
+                string Encrypted = new Encryption().EncryptText(FileContents, txtDecryptionPassword.Text);
+                File.WriteAllText(txtFilePath.Text, Encrypted, Encoding.UTF8);
             }
             catch { }
         }
@@ -65,7 +87,10 @@ namespace BrainStorm
         {
             try
             {
+                string FileContents = File.ReadAllText(@txtFilePath.Text);
+                string Decrypted = new Encryption().DecryptText(FileContents, txtDecryptionPassword.Text);
 
+                File.WriteAllText(txtFilePath.Text, Decrypted);
             }
             catch { }
         }
