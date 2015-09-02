@@ -17,7 +17,13 @@ namespace BrainStorm
         public Main()
         {
             InitializeComponent();
+
+            #region Form Design Phase
+
+            this.Style = MetroFramework.MetroColorStyle.Red;
             panelButton.Enabled = false;
+
+            #endregion
         }
 
         private void Main_Load(object sender, EventArgs e)
